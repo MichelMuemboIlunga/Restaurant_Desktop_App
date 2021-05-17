@@ -10,6 +10,7 @@ public class login extends JFrame implements ActionListener {
     //
 
     Container container = getContentPane();
+    JPanel panel = new JPanel();
     ImageIcon food = new ImageIcon("src/Food.png");
     JLabel label = new JLabel();
     JButton loginButton = new JButton("Login");
@@ -55,6 +56,7 @@ public class login extends JFrame implements ActionListener {
     public void setLayoutManger() {
 
         container.setLayout(null);
+
 
 
     }
@@ -114,6 +116,7 @@ public class login extends JFrame implements ActionListener {
         container.add(resetButton);
 
 
+
     }
 
     @Override
@@ -130,7 +133,7 @@ public class login extends JFrame implements ActionListener {
             // create connection
             try {
                 Connection con = (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/restaurant_app",
-                        "root", "MIMdev1995");
+                        "root", "Your Mysql Password");
                 String username = userIDField.getText();
                 String password = userPasswordField.getText();
 
